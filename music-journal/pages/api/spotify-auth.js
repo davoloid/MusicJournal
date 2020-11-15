@@ -7,7 +7,7 @@ const Spotify = new SpotifyWebApi({
   clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
   redirectUri: process.env.AUTH_REDIRECT_URL,
 });
-const OAUTH_SCOPES = ['user-read-email', 'user-read-recently-played'];
+const OAUTH_SCOPES = ['user-read-email', 'user-read-recently-played', 'user-top-read'];
 
 export default function handler(req, res) {
   const cookies = new Cookies(req, res);
